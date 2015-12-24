@@ -1,30 +1,22 @@
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup
 
-with open('requirements.txt') as requirements_file:
-    requirements = requirements_file.read().splitlines()
+version = '0.0.1'
 
 setup(
     name='curlc',
-    version='0.0.1',
-    description="Borrow cookies from your browser's authenticated session for"
-                "use in curl.",
+    version=version,
+    description="curl wrapper to borrow cookies from your browser's authenticated session",
     author='William Casarin',
     author_email='bill@casarin.me',
     url='https://github.com/jb55/curlc',
     include_package_data=True,
-    install_requires=requirements,
+    install_requires=[ "pycookiecheat >= 0.2.0" ],
+    entry_points = {'console_scripts': ['curlc = curlc:main'] }
+    py_modules = ['curlc'],
     license="GPLv2",
     keywords='curlc',
     classifiers=[
       'Programming Language :: Python :: 3',
-      'Programming Language :: Python :: 3.1',
-      'Programming Language :: Python :: 3.2',
-      'Programming Language :: Python :: 3.3',
-      'Programming Language :: Python :: 3.4',
-      'Programming Language :: Python :: 3.5',
       'Environment :: Console',
       'Intended Audience :: Developers',
       'Intended Audience :: System Administrators',
@@ -32,7 +24,6 @@ setup(
       'Topic :: Software Development',
       'Topic :: System :: Networking',
       'Topic :: Terminals',
-      'Topic :: Text Processing',
       'Topic :: Utilities'
     ],
 )
