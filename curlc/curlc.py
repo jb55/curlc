@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 from pycookiecheat import chrome_cookies
-from http import cookies
 import subprocess
 import sys
 
@@ -17,13 +16,14 @@ def main():
             break
 
     chrome = chrome_cookies(url)
-    C = cookies.SimpleCookie()
 
+    cargs = []
+    carg = "cookie: "
     for k, v in chrome.items():
-        C[k] = v
+        cargs.append(k + "=" + v)
+    carg += "; ".join(cargs)
 
-    curlstr = str(C)
-    args = ["curl", "-H", curlstr]
+    args = ["curl", "-H", carg]
     args.extend(curlargs)
     subprocess.run(args)
 
