@@ -5,9 +5,9 @@
 
 ## Installation
 
-  Install with pip
+  Install with pip3
 
-    $ pip install curlc
+    $ pip3 install curlc
 
 ## Example Usage
 
