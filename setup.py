@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = '0.0.1'
+version = '0.0.2'
 
 setup(
     name='curlc',
@@ -12,7 +12,7 @@ setup(
     url='https://github.com/jb55/curlc',
     include_package_data=True,
     install_requires=[ "pycookiecheat >= 0.2.0" ],
-    entry_points = {'console_scripts': ['curlc = curlc:main'] }
+    entry_points = {'console_scripts': ['curlc=curlc.curlc:main'] },
     license="GPLv2",
     keywords='curlc',
     classifiers=[
