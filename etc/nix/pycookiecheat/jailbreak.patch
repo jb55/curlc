@@ -1,0 +1,30 @@
+diff --git a/requirements-test.txt b/requirements-test.txt
+index 4aa99f3..9fcf611 100644
+--- a/requirements-test.txt
++++ b/requirements-test.txt
+@@ -1,8 +1,8 @@
+-flake8==3.3.0
+-flake8-docstrings==1.1.0
+-flake8-import-order==0.12
+-mypy==0.511
+-pep8-naming==0.4.1
+-pylint==1.7.1
+-pytest==3.0.7
+-tox==2.7.0
++flake8
++flake8-docstrings
++flake8-import-order
++mypy
++pep8-naming
++pylint
++pytest
++tox
+diff --git a/requirements.txt b/requirements.txt
+index bfeda3e..54f626d 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,2 +1,2 @@
+-keyring==10.3.2
+-pycrypto==2.6.1
++keyring
++pycrypto
