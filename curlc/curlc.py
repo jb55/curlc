@@ -15,7 +15,7 @@ def main():
             url = arg
             break
 
-    chrome = chrome_cookies(url)
+    chrome = chrome_cookies(url=url, browser="chromium")
 
     cargs = []
     carg = "cookie: "
