@@ -3,6 +3,7 @@
 from pycookiecheat import chrome_cookies
 import subprocess
 import sys
+import os
 
 def main():
     if len(sys.argv) < 2:
@@ -15,7 +16,10 @@ def main():
             url = arg
             break
 
-    chrome = chrome_cookies(url)
+    browser = "chrome"
+    if "BROWSER" in os.environ and os.environ["BROWSER"] == "chromium":
+        browser = "chromium"
+    chrome = chrome_cookies(url, browser=browser)
 
     cargs = []
     carg = "cookie: "
