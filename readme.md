@@ -12,3 +12,5 @@
 ## Example Usage
 
     $ curlc -L 'http://dropbox.com/secret-file'
+    $ export BROWSER=chromium && curlc -L 'http://dropbox.com/secret-file'
+
